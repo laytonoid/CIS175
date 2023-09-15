@@ -7,9 +7,9 @@ import javax.persistence.Table;
 
 /**  
 * Taylor Layton - tglayton
-* CIS171 22149
-* Sep 13, 2023
-* Windows 10 
+* CIS175
+* Sep 14, 2023
+* Windows 11 
 */
 @Entity
 @Table(name="force_users")
@@ -18,10 +18,10 @@ public class ForceUser {
 	@Id
 	@GeneratedValue
 	@Column(name="ID")
-	private int id;
+	 private int id;
 	@Column(name="NAME")
 	private String name;
-	@Column(name="LIGHTSABER_COLOR")
+	@Column(name="LIGHTSABER COLOR")
 	private String lightsaberColor;
 	@Column(name="AFFILIATION")
 	private String affiliation; 
@@ -36,7 +36,7 @@ public class ForceUser {
 		this.affiliation = affiliation;
 	}
 
-	// Getters and Setters
+	// Getters/setters
 	public int getId() {
 		return id;
 	}
@@ -45,8 +45,8 @@ public class ForceUser {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	 public void setName(String name) {
+	this.name = name;
 	}
 
 	public String getLightsaberColor() {
@@ -54,7 +54,7 @@ public class ForceUser {
 	}
 
 	public void setLightsaberColor(String lightsaberColor) {
-		this.lightsaberColor = lightsaberColor;
+	   this .lightsaberColor = lightsaberColor;
 	}
 
 	public String getAffiliation() {

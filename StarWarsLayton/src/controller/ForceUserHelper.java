@@ -11,9 +11,9 @@ import model.ForceUser;
 
 /**  
 * Taylor Layton - tglayton
-* CIS171 22149
-* Sep 13, 2023
-* Windows 10 
+* CIS175
+* Sep 14, 2023
+* Windows 11 
 */
 public class ForceUserHelper {
 

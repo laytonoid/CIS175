@@ -6,9 +6,9 @@ import model.ForceUser;
 import controller.ForceUserHelper;
 /**  
 * Taylor Layton - tglayton
-* CIS171 22149
-* Sep 13, 2023
-* Windows 10 
+* CIS175
+* Sep 14, 2023
+* Windows 11 
 */
 public class StartProgram {
 
@@ -19,7 +19,7 @@ public class StartProgram {
         System.out.print("Enter a name: ");
         String name = in.nextLine();
         System.out.print("Enter lightsaber color: ");
-        String color = in.nextLine();
+        String  color = in.nextLine();
         System.out.print("Enter affiliation (Sith/Jedi): ");
         String affiliation = in.nextLine();
         ForceUser toAdd = new ForceUser(name, color, affiliation);
@@ -27,7 +27,7 @@ public class StartProgram {
     }
 
     private static void viewTheForceUsers() {
-        List<ForceUser> allForceUsers = fuHelper.showAllForceUsers();
+        List<ForceUser>  allForceUsers = fuHelper.showAllForceUsers();
         for (ForceUser singleForceUser : allForceUsers) {
             System.out.println(singleForceUser.returnForceUserDetails());
         }
@@ -54,7 +54,7 @@ public class StartProgram {
             if (selection == 1) {
                 System.out.print("Enter the new name: ");
                 String newName = in.nextLine();
-                toEdit.setName(newName);
+                toEdit. setName(newName);
             } else if (selection == 2) {
                 System.out.print("Enter the new lightsaber color: ");
                 String newColor = in.nextLine();
@@ -78,18 +78,18 @@ public class StartProgram {
         System.out.println("Star Wars Force User Database");
         while (goAgain) {
             System.out.println("*  Select an option:");
-            System.out.println("*  1 -- Add Force User");
-            System.out.println("*  2 -- Edit Force User");
-            System.out.println("*  3 -- Delete Force User");
-            System.out.println("*  4 -- View Force Users");
-            System.out.println("*  5 -- Exit Program");
+            System.out.println("*  1 - Add force user");
+            System.out.println("*  2 - Edit force user");
+            System.out.println("*  3 - Delete force user");
+            System.out.println("*  4 - View force users");
+            System.out.println("*  5 - Exit the program");
             System.out.print("*  Your selection: ");
             int selection = in.nextInt();
             in.nextLine();
 
             if (selection == 1) {
                 addAForceUser();
-            } else if (selection == 2) {
+            } else if ( selection == 2) {
                 editAForceUser();
             } else if (selection == 3) {
                 deleteAForceUser();
@@ -97,7 +97,7 @@ public class StartProgram {
                 viewTheForceUsers();
             } else {
                 fuHelper.cleanUp();
-                System.out.println("   Goodbye!   ");
+                System.out.println("  Program closing   ");
                 goAgain = false;
             }
         }
