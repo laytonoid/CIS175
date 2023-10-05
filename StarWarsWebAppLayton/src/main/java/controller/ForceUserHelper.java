@@ -32,5 +32,4 @@ public class ForceUserHelper {
 		return allForceUsers;
 	}
 	
-	// Add any other DAO methods as needed
 }
