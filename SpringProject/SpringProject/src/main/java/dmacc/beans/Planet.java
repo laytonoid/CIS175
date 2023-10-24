@@ -83,5 +83,4 @@ public class Planet {
 		this.population = population;
 	}
 
-    //... Constructors, Getters, Setters, and toString() method ...
 }
