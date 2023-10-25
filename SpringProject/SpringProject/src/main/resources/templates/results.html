@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Planets</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr th:each="currentPlanet : ${planets}">
+            <td th:text="${currentPlanet.id}"></td>
+            <td th:text="${currentPlanet.name}"></td>
+            <td th:text="${currentPlanet.climate}"></td>
+            <td th:text="${currentPlanet.terrain}"></td>
+            <td th:text="${currentPlanet.population}"></td>
+            <td><a th:href="@{/edit/{id}(id=${currentPlanet.id})}">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${currentPlanet.id})}">Delete</a></td>
+        </tr>
+    </table>
+</form>
+<a href="inputPlanet">Add a new Planet</a>
+</body>
+</html>

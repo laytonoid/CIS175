@@ -59,4 +59,5 @@ public class Species {
 	public void setAverageLifespan(int averageLifespan) {
 		this.averageLifespan = averageLifespan;
 	}
+
 }
