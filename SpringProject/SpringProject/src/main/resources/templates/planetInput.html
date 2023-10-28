@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert New Planet</title>
+</head>
+<body>
+<form th:object="${newPlanet}" th:action="@{/planetInput}" method="POST">
+    Name: <input name="name" size="20" th:field="*{name}"><br />
+    Climate: <input name="climate" size="20" th:field="*{climate}"><br />
+    Terrain: <input name="terrain" size="20" th:field="*{terrain}"><br />
+    Population: <input name="population" size="20" th:field="*{population}"><br />
+    Species Name: <input name="speciesName" size="20" th:field="*{dominantSpecies.name}"><br />
+	Species Classification: <input name="speciesClassification" size="20" th:field="*{dominantSpecies.classification}"><br />
+	Species Average Lifespan: <input name="speciesAverageLifespan" size="20" th:field="*{dominantSpecies.averageLifespan}"><br />
+    <input name="submit" type="submit" value="submit" />
+</form>
+<a href="viewAllPlanets">View all Planets</a>
+</body>
+</html>

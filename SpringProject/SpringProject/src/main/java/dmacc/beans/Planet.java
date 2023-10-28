@@ -3,6 +3,10 @@ package dmacc.beans;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
 
 @Entity
 public class Planet {
@@ -13,6 +17,10 @@ public class Planet {
     private String climate;
     private String terrain;
     private long population;
+    
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "species_id")
+    private Species dominantSpecies;
 
     public Planet(String name, String climate, String terrain, long population) {
         this.name = name;
@@ -82,5 +90,12 @@ public class Planet {
 	public void setPopulation(long population) {
 		this.population = population;
 	}
+	
+    public Species getDominantSpecies() {
+        return dominantSpecies;
+    }
 
+    public void setDominantSpecies(Species dominantSpecies) {
+        this.dominantSpecies = dominantSpecies;
+    }
 }

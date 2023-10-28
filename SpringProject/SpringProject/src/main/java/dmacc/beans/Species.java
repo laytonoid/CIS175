@@ -1,9 +1,15 @@
 package dmacc.beans;
 
-import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-@Embeddable
+@Entity
 public class Species {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String name;
     private String classification;
     private int averageLifespan;
@@ -54,10 +60,17 @@ public class Species {
 	}
 
 	/**
-	 * @param averageLifespan the averageLifespan to set
+	 * @param averageLifespan is averageLifespan to set
 	 */
 	public void setAverageLifespan(int averageLifespan) {
 		this.averageLifespan = averageLifespan;
 	}
+	
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 }

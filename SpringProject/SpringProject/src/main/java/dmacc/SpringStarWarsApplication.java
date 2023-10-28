@@ -31,9 +31,6 @@ public class SpringStarWarsApplication implements CommandLineRunner {
         Planet planet = appContext.getBean("planet", Planet.class);
         repo.save(planet);
 
-        Planet hoth = new Planet("Hoth", "Frozen", "Tundras", 50000L);
-        repo.save(hoth);
-
         List<Planet> allPlanets = repo.findAll();
         for (Planet p : allPlanets) {
             System.out.println(p.toString());

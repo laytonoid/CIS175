@@ -12,14 +12,15 @@ public class BeanConfiguration {
     public Planet planet() {
         Planet planet = new Planet();
         planet.setName("Endor");
-        planet.setClimate("Temperate");
+        planet.setClimate("Humid");
         planet.setTerrain("Forests");
-        planet.setPopulation(1000000L);
+        planet.setPopulation(10000);
+        planet.setDominantSpecies(species()); 
         return planet;
     }
 
     @Bean
     public Species species() {
-        return new Species("Wookiee", "Mammal", 400);
+        return new Species("Ewok", "Mammal", 400);
     }
 }

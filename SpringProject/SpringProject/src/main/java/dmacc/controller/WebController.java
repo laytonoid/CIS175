@@ -39,14 +39,14 @@ public class WebController {
         return "planetResults";
     }
     
-    @GetMapping("/inputPlanet")
+    @GetMapping("/planetInput")
     public String addNewPlanet(Model model) {
         Planet p = new Planet();
         model.addAttribute("newPlanet", p);
         return "planetInput";
     }
 
-    @PostMapping("/inputPlanet")
+    @PostMapping("/planetInput")
     public String addNewPlanet(@ModelAttribute Planet p, Model model) {
         planetRepo.save(p);
         return viewAllPlanets(model);
